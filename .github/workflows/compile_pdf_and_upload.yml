@@ -16,8 +16,8 @@ jobs:
         id: check_version
         run: |
           VERSION=$(echo "${{ github.event.head_commit.message }}" | grep -oE "[0-9]+\.[0-9]+\.[0-9]+" || echo "")
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-      - name: Compile LaTeX document
+          echo "VERSION=$VERSION" >> $GITHUB_ENV1
+      - name: Compile LaTeX document1
         uses: dante-ev/latex-action@latest
         with:
           working_directory: Main
